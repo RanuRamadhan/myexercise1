@@ -1,22 +1,30 @@
-package myexercise1;
+package myexercise2;
 import java.util.Scanner;
-public class Distance
+public class VowelChecker
 {
  public static void main(String[] args)
  {
- int u,a,t,Distance;
- System.out.println("Enter the value of Initial Velocity:");
- Scanner sc1 = new Scanner(System.in);
- u= sc1.nextInt();
- System.out.println("Enter the value of acceleartion:");
- Scanner sc2 = new Scanner(System.in); 
-a= sc2.nextInt();
- System.out.println("Enter the value of time:");
- Scanner sc3 = new Scanner(System.in);
- t= sc2.nextInt();
- Distance=u*t+(a*t*t)/2;
- System.out.println("-------------------------------------------");
- System.out.println("Distance Travelled ="+Distance + " Meter");
- System.out.println("-------------------------------------------");
+ Scanner obj = new Scanner(System.in);
+ String input;
+
+ System.out.println("Enter the character (a to z): ");
+ input = obj.nextLine();
+
+ switch(input)
+ {
+ case "a":
+ case "A":
+ case "e":
+ case "E":
+ case "i":
+ case "O":
+ case "o":
+ case "U":
+ case "u": System.out.println("It is a vowel");
+ break;
+ default: System.out.println("It is a consonant");
+ break;
  }
-} 
+
+ }
+}
